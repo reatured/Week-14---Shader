@@ -1,7 +1,9 @@
-﻿Shader "Unlit/Zero2Shaders/Step"
+Shader "Unlit/Zero2Shaders/Step"
 {
     Properties
     {
+        _LowerEdge("Low Edge", Range(0,1)) = 0
+        _UpperEdge("upper Edge", Range(0,1)) = 0
     }
 
     SubShader
@@ -39,10 +41,12 @@
                 o.uv = v.uv;
                 return o;
             }
-
+            
+            float _LowerEdge,_UpperEdge;
             fixed4 frag(v2f i) : SV_Target
             {
                 //smoothstep function as color
+                return smoothstep(_LowerEdge, _UpperEdge, i.uv.y);
             }
             ENDCG
         }

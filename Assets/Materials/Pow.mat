@@ -21,5 +21,6 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - _K: 3
-    - _Power: 9.49
+    - _Power: 0.5
     m_Colors: []
+  m_BuildTextureStacks: []

@@ -2,6 +2,7 @@
 {
     Properties
     {
+        _Frequency("Frequency", Range(1 , 1000)) =1
     }
 
     SubShader
@@ -26,11 +27,13 @@
                 float2 uv : TEXCOORD0;
             };
 
+
             struct v2f
             {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
             };
+            float _Frequency;
 
             v2f vert (appdata v)
             {
@@ -43,6 +46,7 @@
             fixed4 frag(v2f i) : SV_Target
             {
                 //use sin function for color
+                return float4(sin(i.uv.x * PI_2 * _Frequency) * 0.5f + 0.5f, 0.5f, 0.5f, 0.8f);
             }
             ENDCG
         }

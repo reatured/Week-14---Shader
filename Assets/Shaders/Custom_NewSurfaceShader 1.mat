@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PseudoRandom
-  m_Shader: {fileID: 4800000, guid: 85888b1b7ffd80448a5e32f33ebf7881, type: 3}
+  m_Name: Custom_NewSurfaceShader 1
+  m_Shader: {fileID: 4800000, guid: bb648819444d240b38c292d1ea7276be, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,8 +18,14 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Speed: 0
-    m_Colors: []
+    - _Glossiness: 0.485
+    - _Metallic: 1
+    m_Colors:
+    - _Color: {r: 0.8962264, g: 0.5453453, b: 0.5453453, a: 1}
   m_BuildTextureStacks: []
